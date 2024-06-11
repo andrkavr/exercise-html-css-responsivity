@@ -7,6 +7,8 @@
 body {
   max-width: 1024px;
   margin: 0 auto;
+  padding: 10px;
+  height: 100vh;
 }
 
 header,
@@ -24,6 +26,7 @@ footer {
 main {
   display: grid;
   grid-template-columns: 25% 50% 25%;
+  padding: 10px 0;
 }
 
 .left-section {
@@ -39,8 +42,8 @@ main {
 }
 
 .center-section {
-  background-color: bisque;
   height: 540px;
+  margin: 0 10px;
 }
 
 .right-section {
@@ -52,11 +55,16 @@ main {
   height: 100px;
   background-color: rgb(171, 204, 171);
   width: 100%;
+  padding: 10px 0;
 }
 
 @media screen and (max-width: 767px) {
+  .header-bar {
+    max-height: 80px;
+  }
   main {
     grid-template-columns: 1fr;
+    padding: 5px 5px;
   }
 
   .left-section,
@@ -72,15 +80,24 @@ main {
   .left-section {
     order: 0;
     height: min-content;
+    gap: 5px 0;
   }
 
   .center-section {
     order: 1;
-    max-height: 150px;
+    min-height: 100px;
+    max-height: 170px;
+    margin: 10px 0 10px 0;
   }
 
   .right-section {
     order: 2;
-    max-height: 150px;
+    min-height: 100px;
+    max-height: 120px;
+  }
+
+  .footer-section {
+    max-height: 90px;
+    margin-top: auto;
   }
 }
