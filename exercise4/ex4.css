@@ -13,8 +13,15 @@ body {
   margin: 0 auto;
 }
 
+header {
+  display: flex;
+  height: 120px;
+  align-items: center;
+  padding: 5rem 2rem;
+}
+
 .circle {
-  background-color: #491263;
+  background-color: #480063;
   border-radius: 50%;
   width: 100px;
   height: 100px;
@@ -25,26 +32,68 @@ main {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100%;
 }
 
 .boxes {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  gap: 1rem;
+  padding: 0 2.2rem;
+  height: 100%;
 }
 
 .box {
-  min-height: 100px;
+  min-height: 80px;
   min-width: 150px;
-  border: 1px solid blueviolet;
 }
 
 .boxes .box:nth-child(1),
 .boxes .box:nth-child(4) {
-  background-color: purple;
+  background-color: #b2008a;
 }
 .boxes .box:nth-child(2),
 .boxes .box:nth-child(3) {
-  background-color: pink;
+  background-color: #fd96a9;
+}
+
+.action {
+  background-color: #f42dac;
+  align-self: center;
+  justify-self: center;
+  width: 250px;
+  height: 100px;
+  border-radius: 25px;
+  margin: 3rem 0;
+}
+
+footer {
+  min-height: 100px;
+  background-color: #c1c99a;
+  margin: 0 1rem 1rem 1rem;
+}
+
+@media screen and (max-width: 767px) {
+  header {
+    justify-content: center;
+  }
+
+  .boxes {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .box:nth-child(1) {
+    order: 2;
+  }
+  .box:nth-child(2) {
+    order: 1;
+  }
+
+  .action {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    width: 120px;
+    border-radius: 50px;
+    height: 65px;
+  }
 }
